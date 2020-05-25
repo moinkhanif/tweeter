@@ -13,12 +13,12 @@
   <body>
     <% if flash[:notice] %>
       <div class="notification is-primary global-notification">
-        <p class="notice"><% notice %></p>
+        <p class="notice"><%= notice %></p>
       </div>
     <% end %>
     <% if flash[:alert] %>
       <div class="notification is-danger globalnotification">
-        <p class="alert"> <% alert %> </p>
+        <p class="alert"> <%= alert %> </p>
       </div>
     <% end %>
     
@@ -36,11 +36,13 @@
 
       <div id="navbarExample" class="navbar-menu">
         <div class="navbar-end">
-          <div class="field is-grouped">
-            <p class="control">
-              <%= link_to 'New Tweeet', new_tweeet_path, class:  "button is-info is-inverted" %>
-            </p>
-            <p class="control">Sign Up</p>
+          <div class="navbar-item">
+            <div class="field is-grouped">
+              <p class="control">
+                <%= link_to 'New Tweeet', new_tweeet_path, class:  "button is-info is-inverted" %>
+              </p>
+              <p class="button is-info">Sign Up</p>
+            </div>
           </div>
         </div>
       </div>
